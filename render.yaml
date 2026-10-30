@@ -9,7 +9,7 @@ services:
     name: medrynx-backend-api
     runtime: node
     plan: free
-    rootDir: Medrynx_Project/backend
+    rootDir: backend
     buildCommand: npm install --include=dev && npx prisma generate && npm run build
     startCommand: npx prisma migrate deploy && npm start
     healthCheckPath: /api/v1/health/liveness
@@ -61,7 +61,7 @@ services:
     name: medrynx-aiml-service
     runtime: python
     plan: free
-    rootDir: medivault-aiml
+    rootDir: aiml
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
