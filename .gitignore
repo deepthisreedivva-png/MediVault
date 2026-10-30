@@ -1,0 +1,29 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+env/
+venv/
+
+# Build artifacts
+dist/
+build/
+artifacts/
+cache/
+
+# Logs
+*.log
+logs/
+
+# Scratch & Temporary
+scratch/
+.tmp/
+Thumbs.db
+.DS_Store
